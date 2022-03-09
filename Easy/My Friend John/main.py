@@ -66,14 +66,13 @@ if __name__ == "__main__":
                         datefmt="%H:%M:%S")
 
    threads = list()
-   # rockyou_pass = sorted(load_pass("rockyou.txt"))
-   # rockyou_pass = rockyou_pass[9193121:9193321]
-   # CrackPass(rockyou_pass, "use-rockyou.zip")
+   rockyou_pass = sorted(load_pass("rockyou.txt"))
+   CrackPass(rockyou_pass, "use-rockyou.zip")
 
-   # rockyou_pass = sorted(load_pass("custom-list.txt"))
-   # CrackPass(rockyou_pass, "custom-list.zip")
+   rockyou_pass = sorted(load_pass("custom-list.txt"))
+   CrackPass(rockyou_pass, "custom-list.zip")
 
-   pin_passwords = [str(pwd) for pwd in list(range(991000, 999999))]      
+   pin_passwords = [str(pwd) for pwd in list(range(999999))]      
    CrackPass(pin_passwords, "brute-force-pin.zip")
 
    print('flag.txt')
